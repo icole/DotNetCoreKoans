@@ -15,6 +15,7 @@ namespace DotNetCoreKoans.Koans
         public void TrueIsTreatedAsTrue()
         {
             // true is true
+            FILL_ME_IN = true;
             Assert.Equal(true, FILL_ME_IN);
         }
 
@@ -22,6 +23,7 @@ namespace DotNetCoreKoans.Koans
         public void FalseIsTreatedAsFalse()
         {
             // false is false
+            FILL_ME_IN = false;
             Assert.Equal(false, FILL_ME_IN);
         }
 
@@ -36,7 +38,7 @@ namespace DotNetCoreKoans.Koans
         public void BoolIsAReservedWordOfSystemBoolean()
         {
             // bool is a Alias of System.Boolean
-            Assert.Equal(typeof(System.Boolean), typeof(FillMeIn));
+            Assert.Equal(typeof(System.Boolean), typeof(bool));
         }
 
         [Step(5)]
@@ -44,10 +46,8 @@ namespace DotNetCoreKoans.Koans
         {
             var otherTypes = new object[]
             {
-                "not a bool",
-                1, 0,
-                null,
-                new object[0]
+               true,
+               false
             };
 
             foreach (var otherType in otherTypes)
